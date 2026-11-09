@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f172a" />
+  <title>Local AI Assistant</title>
+  <link rel="manifest" href="/static/manifest.json" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Локальный ИИ-ассистент</h1>
+      <p>Документы, изображения, аудио, видео, Wiki, вычисления, история, озвучка, ZIP</p>
+    </header>
+
+    <section class="panel">
+      <h2>1. Загрузка файлов</h2>
+      <input id="fileInput" type="file" multiple />
+      <button id="uploadBtn">Загрузить</button>
+      <div id="uploadStatus" class="status"></div>
+      <div id="fileList" class="file-list"></div>
+    </section>
+
+    <section class="panel">
+      <h2>2. История чата</h2>
+      <div id="chatHistory" class="chat-history"></div>
+      <button id="clearHistoryBtn" class="secondary-btn">Очистить историю</button>
+    </section>
+
+    <section class="panel">
+      <h2>3. Запрос к ассистенту</h2>
+      <textarea id="questionInput" rows="6" placeholder="Например: что важно в этом документе?"></textarea>
+      <div class="options">
+        <label><input type="checkbox" id="wikiCheck" /> Википедия</label>
+        <label><input type="checkbox" id="imageCheck" /> OCR изображений</label>
+        <label><input type="checkbox" id="audioCheck" /> Распознавание аудио</label>
+      </div>
+      <button id="askBtn">Отправить</button>
+      <div id="answerOutput" class="output"></div>
+      <button id="speakBtn" class="secondary-btn">Озвучить ответ</button>
+    </section>
+
+    <section class="panel">
+      <h2>4. Калькулятор</h2>
+      <input id="calcInput" type="text" placeholder="Например: 2+2*5" />
+      <button id="calcBtn">Посчитать</button>
+      <div id="calcOutput" class="output"></div>
+    </section>
+
+    <section class="panel">
+      <h2>5. Видео</h2>
+      <select id="videoSelect"></select>
+      <textarea id="videoQuestion" rows="3" placeholder="Например: Что происходит в этом видео?"></textarea>
+      <label>Кадров:
+        <input id="frameCountInput" type="number" min="1" max="8" value="6" />
+      </label>
+      <label><input id="includeVideoAudio" type="checkbox" checked /> Распознать речь</label>
+      <button id="analyzeVideoBtn">Анализировать видео</button>
+      <div id="videoOutput" class="output"></div>
+    </section>
+
+    <section class="panel">
+      <h2>6. Генерация видео из текста</h2>
+      <textarea id="videoPrompt" rows="3" placeholder="Например: cinematic city view at sunset with flying drone"></textarea>
+      <label>Длительность (сек):
+        <input id="videoDuration" type="number" min="1" max="600" value="8" />
+      </label>
+      <button id="generateVideoBtn">Создать видео</button>
+      <div id="videoGenerateStatus" class="output"></div>
+    </section>
+
+    <section class="panel">
+      <h2>7. Скачивание</h2>
+      <a href="/download-files.zip" class="download-link" download>Скачать ZIP с файлами</a>
+      <a href="/download-project.zip" class="download-link" download>Скачать ZIP проекта</a>
+    </section>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

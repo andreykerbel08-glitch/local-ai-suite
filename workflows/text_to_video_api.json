@@ -1,0 +1,22 @@
+{
+  "last_node_id": 1,
+  "last_link_id": 0,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "CLIPTextEncode",
+      "pos": [50, 50],
+      "size": [400, 200],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [{ "name": "text", "type": "STRING", "link": null }],
+      "outputs": [{ "name": "CLIP", "type": "CLIP", "links": [] }],
+      "properties": {},
+      "widgets_values": ["placeholder_prompt"]
+    }
+  ],
+  "links": [],
+  "groups": [],
+  "config": {}
+}

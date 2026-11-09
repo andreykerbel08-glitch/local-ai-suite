@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #020817, #0f172a);
+  color: #e2e8f0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 16px 80px;
+}
+
+.header {
+  margin-bottom: 18px;
+}
+
+.header h1 {
+  margin: 0 0 8px;
+  font-size: 2.1rem;
+}
+
+.header p {
+  margin: 0;
+  color: #94a3b8;
+}
+
+.panel {
+  background: rgba(17, 24, 39, 0.95);
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.panel h2 {
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-size: 1.2rem;
+}
+
+input[type="file"], input[type="text"], textarea, select {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 12px 14px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+button, .download-link {
+  display: inline-block;
+  background: linear-gradient(135deg, #10b981, #22c55e);
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  padding: 11px 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.secondary-btn {
+  background: linear-gradient(135deg, #38bdf8, #2563eb);
+}
+
+button:hover, .download-link:hover {
+  filter: brightness(1.06);
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  color: #94a3b8;
+  margin: 10px 0 12px;
+}
+
+.status, .output, .file-list, .chat-history {
+  margin-top: 12px;
+  padding: 12px 14px;
+  background: #020817;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  white-space: pre-wrap;
+  color: #e2e8f0;
+}
+
+.file-list, .chat-history {
+  color: #94a3b8;
+}
+
+.chat-entry {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #1f2937;
+  padding-bottom: 8px;
+}
+
+.chat-entry strong {
+  color: white;
+}
